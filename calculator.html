@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div style="width: 400px; height: 200px; margin: auto; padding-top: 100px; background-color: blue;">
+            <input type="number" name="first" id="first" stp="any" style="background-color: blanchedalmond; color: black;height: 50px; width: 150px; font-size: 40px; text-align:center;"/>
+            <select id="ope" style="background-color: yellow; color: black;height: 50px; width: 75px; font-size: 40px; text-align: center;">
+                <option>+</option>
+                <option>-</option>
+                <option>x</option>
+                <option>/</option>
+            </select>
+            <input type="number" name="second" id="second" stp="any" style="background-color:greenyellow; color: black;height: 50px; width: 150px; font-size: 40px; text-align:center;"/>
+            <br/>
+            <br/>
+            <button onclick="cal()" style="background-color: red; color: white;height: 50px; width: 150px; font-size: 25px;">Calculate</button>
+            <input type="number" name="text" readonly="" id="res" style="background-color:greenyellow; color: black;height: 50px; width: 200px; font-size: 40px; text-align:center;"/>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+function cal(){
+    var opr1=document.getElementById("first").value;
+    var opr2=document.getElementById("second").value;
+    var ope=document.getElementById("ope").value;
+    if (ope=="+"){
+        document.getElementById("res").value=parseFloat(opr1)+parseFloat(opr2);
+    }
+    else if (ope=="-"){
+        document.getElementById("res").value=parseFloat(opr1)-parseFloat(opr2);
+    }
+    else if (ope=="x"){
+        document.getElementById("res").value=parseFloat(opr1)*parseFloat(opr2);
+    }
+    else{
+        document.getElementById("res").value=parseFloat(opr1)/parseFloat(opr2);
+
+    }
+    
+}
+
+</script>
+</html>
